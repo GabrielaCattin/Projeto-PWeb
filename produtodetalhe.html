@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Amor de Mãe</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caixa">
+                <h1><img src="Amor de Mãe.png"></h1>
+
+                <input type="text" id="busca" class="inputbusca" placeholder="Busca">
+                <input type="submit" value="Buscar" class="buscar">
+
+                <a href="cadastro.html">Cadastre-se</a>
+
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="vitrinepweb.html">Home</a></li>
+                    <li><a href="produtodetalhe.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="cesta.html">Cesta</a></li>
+                    <li><a href="login">Login</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <main>
+            <p>Consulte o tamanho do seu cabelo na tabela abaixo</p>
+            <img src="medida.jpg">
+
+            <ul>
+                <li>
+                    <h2>Luzes Tam P</h2>
+                    <img src="luzes.jfif">
+                    <p class="produto-descricao">Iluminação ou Global</p>
+                    <p class="produto-preco">R$150,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Luzes Tam M</h2>
+                    <img src="luzes.jfif">
+                    <p class="produto-descricao">Iluminação ou Global</p>
+                    <p class="produto-preco">R$250,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Luzes Tam G</h2>
+                    <img src="luzes.jfif">
+                    <p class="produto-descricao">Iluminação ou Global</p>
+                    <p class="produto-preco">R$350,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Coloração Tam P</h2>
+                    <img src="coloração.png">
+                    <p class="produto-descricao">Escolha o tom da sua preferência</p>
+                    <p class="produto-preco">R$90,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Coloração Tam M</h2>
+                    <img src="coloração.png">
+                    <p class="produto-descricao">Escolha o tom da sua preferência</p>
+                    <p class="produto-preco">R$150,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Coloração Tam G</h2>
+                    <img src="coloração.png">
+                    <p class="produto-descricao">Escolha o tom da sua preferência</p>
+                    <p class="produto-preco">R$230,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Corte</h2>
+                    <img src="corte.png">
+                    <p class="produto-descricao">Várias opções e estilos</p>
+                    <p class="produto-preco">R$60,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Progressiva ou Botox Tam P</h2>
+                    <img src="progressiva.png">
+                    <p class="produto-descricao">Cabelos lisos e alinhados</p>
+                    <p class="produto-preco">R$100,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Progressiva ou Botox Tam M</h2>
+                    <img src="progressiva.png">
+                    <p class="produto-descricao">Cabelos lisos e alinhados</p>
+                    <p class="produto-preco">R$150,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Progressiva ou Botox Tam G</h2>
+                    <img src="progressiva.png">
+                    <p class="produto-descricao">Cabelos lisos e alinhados</p>
+                    <p class="produto-preco">R$200,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Escova Tam P</h2>
+                    <img src="escova.jpg">
+                    <p class="produto-descricao">Escova com ou sem chapinha</p>
+                    <p class="produto-preco">R$60,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Escova Tam M</h2>
+                    <img src="escova.jpg">
+                    <p class="produto-descricao">Escova com ou sem chapinha</p>
+                    <p class="produto-preco">R$80,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Escova Tam G</h2>
+                    <img src="escova.jpg">
+                    <p class="produto-descricao">Escova com ou sem chapinha</p>
+                    <p class="produto-preco">R$100,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Tratamento Tam P</h2>
+                    <img src="tratamento.png">
+                    <p class="produto-descricao">Hidratação, Nutrição ou Reconstrução</p>
+                    <p class="produto-preco">R$70,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Tratamento Tam M</h2>
+                    <img src="tratamento.png">
+                    <p class="produto-descricao">Hidratação, Nutrição ou Reconstrução</p>
+                    <p class="produto-preco">R$90,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Tratamento Tam G</h2>
+                    <img src="tratamento.png">
+                    <p class="produto-descricao">Hidratação, Nutrição ou Reconstrução</p>
+                    <p class="produto-preco">R$110,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Manicure</h2>
+                    <img src="manicure.png">
+                    <p class="produto-descricao">Cutilagem e pintura</p>
+                    <p class="produto-preco">R$30,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+                <li>
+                    <h2>Pedicure</h2>
+                    <img src="pedicure.png">
+                    <p class="produto-descricao">Cutilagem, pintura e spa dos pés</p>
+                    <p class="produto-preco">R$50,00</p>
+                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
+                </li>
+            </ul>
+        </main>
+
+        <script type="text/javascript">
+            function botao(){
+                location.href="cesta.html"
+            }
+        </script>
+    </body>
+</html>
