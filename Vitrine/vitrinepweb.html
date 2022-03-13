@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amor de Mãe</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Oswald:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../header.css" />
+    <link rel="stylesheet" href="../footer.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="caixa d-flex justify-content-between align-items-center">
+          <h1><img class="rounded-circle" src="../img/Amor de Mãe.png" /></h1>
+          <form class="pesquisa form-inline my-2 my-lg-0 d-flex">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Busca"
+              aria-label="Search"
+            />
+            <button id="buscar" class="btn my-2 my-sm-0" type="submit">
+              Buscar
+            </button>
+          </form>
+          <div class="cadastro">
+            <a id="cadastro" href="cadastro.html">
+              <img src="../img/avatar.png" alt="Cadastro" />
+              Cadastro
+            </a>
+          </div>
+        </div>
+        <div class="menu">
+          <ul class="d-flex justify-content-evenly m-0">
+            <li><a href="vitrinepweb.html">Home</a></li>
+            <li><a href="produtodetalhe.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="cesta.html">Cesta</a></li>
+            <li><a href="login">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="banner">
+        <img src="../img/banner-1.jpg" alt="" />
+        <h2 class="text-uppercase"><i>Você na sua melhor versão</i></h2>
+      </section>
+      
+      <section class="produtos">
+        <h2 class="text-center">Conheça os nossos serviços</h2>
+        <div class="group card-deck d-grid">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/luzes.jfif"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Luzes</h5>
+              <p class="card-text">Iluminação ou Global</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/coloração.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Coloração</h5>
+              <p class="card-text">Escolha o tom da sua preferência</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/corte.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Corte</h5>
+              <p class="card-text">Várias opções e estilos</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/progressiva.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Progressiva ou Botox</h5>
+              <p class="card-text">Cabelos lisos e alinhados</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/escova.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body .align-bottom">
+              <h5 class="card-title">Escova</h5>
+              <p class="card-text">Escova com ou sem chapinha</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/tratamento.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tratamento</h5>
+              <p class="card-text">Hidratação, Nutrição ou Reconstrução</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/manicure.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Manicure</h5>
+              <p class="card-text">Cutilagem e pintura</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="../img/pedicure.png"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pedicure</h5>
+              <p class="card-text">Cutilagem, pintura e spa dos pés</p>
+              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </section>
+      <ul class="produtos">
+        <!-- <li>
+          <h2>Luzes</h2>
+          <img src="../img/luzes.jfif" />
+          <p class="produto-descricao">Iluminação ou Global</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li>
+        <li>
+          <h2>Coloração</h2>
+          <img src="../img/coloração.png" />
+          <p class="produto-descricao">Escolha o tom da sua preferência</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li> -->
+        <!-- <li>
+          <h2>Corte</h2>
+          <img src="../img/corte.png" />
+          <p class="produto-descricao">Várias opções e estilos</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li>
+        <li>
+          <h2>Progressiva ou Botox</h2>
+          <img src="../img/progressiva.png" />
+          <p class="produto-descricao">Cabelos lisos e alinhados</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li> -->
+        <!-- <li>
+          <h2>Escova</h2>
+          <img src="../img/escova.jpg" />
+          <p class="produto-descricao">Escova com ou sem chapinha</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li>
+        <li>
+          <h2>Tratamento</h2>
+          <img src="../img/tratamento.png" />
+          <p class="produto-descricao">Hidratação, Nutrição ou Reconstrução</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li> -->
+        <!-- <li>
+          <h2>Manicure</h2>
+          <img src="../img/manicure.png" />
+          <p class="produto-descricao">Cutilagem e pintura</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li>
+        <li>
+          <h2>Pedicure</h2>
+          <img src="../img/pedicure.png" />
+          <p class="produto-descricao">Cutilagem, pintura e spa dos pés</p>
+          <input type="submit" value="Selecionar" onclick="botao()" />
+        </li> -->
+      </ul>
+      <footer class="footer text-center">
+        <a class="text-uppercase" href="http://">Entre em contato</a>
+        <p class="text-uppercase">COPYRIGHT © 2022 AMOR DE MÃE</p>
+      </footer>
+    </main>
+
+    <script type="text/javascript">
+      function botao() {
+        location.href = "../Produto/produtodetalhe.html";
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

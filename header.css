@@ -1,0 +1,49 @@
+body {
+    overflow-x: hidden;
+}
+.navbar {
+    background-color: rgb(250, 250, 250);
+    padding: 0px 30px;
+    font-family: 'Oswald', sans-serif;
+}
+.caixa {
+    width: 100%;
+    border-bottom: 1px solid rgb(160, 158, 158);
+}
+
+h1 img{
+    width: 50px;   
+}
+
+form .form-control {
+    width: 20vw;
+}
+
+.cadastro a {
+    text-decoration: none;
+    color: rgb(64, 64, 64);
+    font-weight: 700;
+}
+
+.cadastro a img {
+    width: 40px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.pesquisa {
+    gap: 10px;
+}
+
+li{
+    list-style: none;
+    margin: 15px;     
+}
+
+li a {
+    color: rgb(64, 64, 64);
+    text-decoration: none;  
+    font-weight: 700; 
+}
