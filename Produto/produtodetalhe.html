@@ -1,173 +1,402 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Amor de Mãe</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amor de Mãe</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Oswald:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="produtos.css" />
+    <link rel="stylesheet" href="../header.css" />
+    <link rel="stylesheet" href="../footer.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="caixa d-flex justify-content-between align-items-center">
+          <h1><img class="rounded-circle" src="../img/Amor de Mãe.png" /></h1>
+          <form class="pesquisa form-inline my-2 my-lg-0 d-flex">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Busca"
+              aria-label="Search"
+            />
+            <button id="buscar" class="btn my-2 my-sm-0" type="submit">
+              Buscar
+            </button>
+          </form>
+          <div class="cadastro">
+            <a id="cadastro" href="cadastro.html">
+              <img src="../img/avatar.png" alt="Cadastro" />
+              Cadastro
+            </a>
+          </div>
+        </div>
+        <div class="menu">
+          <ul class="d-flex justify-content-evenly m-0">
+            <li><a href="../Vitrine/vitrinepweb.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Serviços</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../Produto/produtodetalhe.html#luzes">Cabelos</a></li>
+                <li><a class="dropdown-item" href="../Produto/produtodetalhe.html#mao-pe">Manicure e Pedicure</a></li>
+                
+              </ul>
+            </li>
+            <li><a href="../Contato/contato.html">Contato</a></li>
+            <li><a href="../Cesta/cesta.html">Cesta</a></li>
+            <li><a href="../Login/login.html">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div class="caixa">
-                <h1><img src="../img/Amor de Mãe.png"></h1>
+    <main>
+      <div class="container">
+        <h2>Escolha o serviço de acordo com o tamanho do seu cabelo.</h2>
 
-                <input type="text" id="busca" class="inputbusca" placeholder="Busca">
-                <input type="submit" value="Buscar" class="buscar">
-
-                <a href="cadastro.html">Cadastre-se</a>
-
+        <section class="separator" id="luzes">
+          <h2>Luzes</h2>
+          <img src="../img/luzes.jfif" />
+          <p class="produto-descricao">Iluminação ou Global</p> 
+          <div class="accordion accordion-flush col-6" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="luzes-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#luzes-p" aria-expanded="false" aria-controls="luzes-p">
+                  Tamanho P
+                </button>
+              </h2>
+              <div id="luzes-p" class="accordion-collapse collapse" aria-labelledby="luzes-1" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"> 
+                    <p class="produto-preco">R$150,00</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                </div>
+              </div>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="vitrinepweb.html">Home</a></li>
-                    <li><a href="produtodetalhe.html">Serviços</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="cesta.html">Cesta</a></li>
-                    <li><a href="login">Login</a></li>
-                </ul>
-            </nav>
-
-        </header>
-
-        <main>
-            <p>Consulte o tamanho do seu cabelo na tabela abaixo</p>
-            <img src="medida.jpg">
-
-            <ul>
-                <li>
-                    <h2>Luzes Tam P</h2>
-                    <img src="luzes.jfif">
-                    <p class="produto-descricao">Iluminação ou Global</p>
-                    <p class="produto-preco">R$150,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Luzes Tam M</h2>
-                    <img src="luzes.jfif">
-                    <p class="produto-descricao">Iluminação ou Global</p>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="luzes-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#luzes-m" aria-expanded="false" aria-controls="luzes-m">
+                  Tamanho M
+                </button>
+              </h2>
+              <div id="luzes-m" class="accordion-collapse collapse" aria-labelledby="luzes-2" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
                     <p class="produto-preco">R$250,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Luzes Tam G</h2>
-                    <img src="luzes.jfif">
-                    <p class="produto-descricao">Iluminação ou Global</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="luzes-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#luzes-g" aria-expanded="false" aria-controls="luzes-g">
+                  Tamanho G
+                </button>
+              </h2>
+              <div id="luzes-g" class="accordion-collapse collapse" aria-labelledby="luzes-3" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
                     <p class="produto-preco">R$350,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Coloração Tam P</h2>
-                    <img src="coloração.png">
-                    <p class="produto-descricao">Escolha o tom da sua preferência</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+        </section>
+        
+        <section class="separator" id="coloracao">
+          <h2>Coloração</h2>
+          <img src="../img/coloração.png" />
+          <p class="produto-descricao">Escolha o tom da sua preferência</p>          
+          <div class="accordion accordion-flush col-6" id="accordionFlushExample2">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="coloracao-1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coloracao-p" aria-expanded="false" aria-controls="coloracao-p">
+                  Tamanho P
+                </button>
+              </h2>
+              <div id="coloracao-p" class="accordion-collapse collapse" aria-labelledby="coloracao-1" data-bs-parent="#accordionFlushExample2">
+                <div class="accordion-body"> 
                     <p class="produto-preco">R$90,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Coloração Tam M</h2>
-                    <img src="coloração.png">
-                    <p class="produto-descricao">Escolha o tom da sua preferência</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                </div>
+              </div>
+              
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="coloracao-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coloracao-m" aria-expanded="false" aria-controls="coloracao-m">
+                  Tamanho M
+                </button>
+              </h2>
+              <div id="coloracao-m" class="accordion-collapse collapse" aria-labelledby="coloracao-2" data-bs-parent="#accordionFlushExample2">
+                <div class="accordion-body">
                     <p class="produto-preco">R$150,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Coloração Tam G</h2>
-                    <img src="coloração.png">
-                    <p class="produto-descricao">Escolha o tom da sua preferência</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="coloracao-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#coloracao-g" aria-expanded="false" aria-controls="coloracao-g">
+                  Tamanho G
+                </button>
+              </h2>
+              <div id="coloracao-g" class="accordion-collapse collapse" aria-labelledby="coloracao-3" data-bs-parent="#accordionFlushExample2">
+                <div class="accordion-body">
                     <p class="produto-preco">R$230,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Corte</h2>
-                    <img src="corte.png">
-                    <p class="produto-descricao">Várias opções e estilos</p>
-                    <p class="produto-preco">R$60,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Progressiva ou Botox Tam P</h2>
-                    <img src="progressiva.png">
-                    <p class="produto-descricao">Cabelos lisos e alinhados</p>
-                    <p class="produto-preco">R$100,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Progressiva ou Botox Tam M</h2>
-                    <img src="progressiva.png">
-                    <p class="produto-descricao">Cabelos lisos e alinhados</p>
-                    <p class="produto-preco">R$150,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Progressiva ou Botox Tam G</h2>
-                    <img src="progressiva.png">
-                    <p class="produto-descricao">Cabelos lisos e alinhados</p>
-                    <p class="produto-preco">R$200,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Escova Tam P</h2>
-                    <img src="escova.jpg">
-                    <p class="produto-descricao">Escova com ou sem chapinha</p>
-                    <p class="produto-preco">R$60,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Escova Tam M</h2>
-                    <img src="escova.jpg">
-                    <p class="produto-descricao">Escova com ou sem chapinha</p>
-                    <p class="produto-preco">R$80,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Escova Tam G</h2>
-                    <img src="escova.jpg">
-                    <p class="produto-descricao">Escova com ou sem chapinha</p>
-                    <p class="produto-preco">R$100,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Tratamento Tam P</h2>
-                    <img src="tratamento.png">
-                    <p class="produto-descricao">Hidratação, Nutrição ou Reconstrução</p>
-                    <p class="produto-preco">R$70,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Tratamento Tam M</h2>
-                    <img src="tratamento.png">
-                    <p class="produto-descricao">Hidratação, Nutrição ou Reconstrução</p>
-                    <p class="produto-preco">R$90,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Tratamento Tam G</h2>
-                    <img src="tratamento.png">
-                    <p class="produto-descricao">Hidratação, Nutrição ou Reconstrução</p>
-                    <p class="produto-preco">R$110,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Manicure</h2>
-                    <img src="manicure.png">
-                    <p class="produto-descricao">Cutilagem e pintura</p>
-                    <p class="produto-preco">R$30,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-                <li>
-                    <h2>Pedicure</h2>
-                    <img src="pedicure.png">
-                    <p class="produto-descricao">Cutilagem, pintura e spa dos pés</p>
-                    <p class="produto-preco">R$50,00</p>
-                    <input type="submit" value="Adicionar ao carrinho" onclick="botao()">
-                </li>
-            </ul>
-        </main>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </section>
 
-        <script type="text/javascript">
-            function botao(){
-                location.href="../Cesta/cesta.html"
-            }
-        </script>
-    </body>
+        <section class="separator" id="corte">
+          <h2>Corte</h2>
+          <img src="../img/corte.png" />
+          <p class="produto-descricao">Várias opções e estilos</p> 
+          <div class="accordion accordion-flush col-6" id="accordionPanelsStayOpenExample3">             
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="corte-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#corte-p" aria-expanded="true" aria-controls="corte-p">
+                    Corte
+                  </button>
+                </h2>
+                <div id="corte-p" class="accordion-collapse collapse" aria-labelledby="corte-1" data-bs-parent="#accordionFlushExample3">
+                  <div class="accordion-body"> 
+                    <p class="produto-preco">R$60,00</p>
+                      <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                  </div>
+                </div>                    
+            </div>              
+            
+        </section>
+          
+        <section class="separator" id="progressiva">
+            <h2>Progressiva</h2>
+            <img src="../img/progressiva.png" />
+             <p class="produto-descricao">Cabelos lisos e alinhados</p>       
+            <div class="accordion accordion-flush col-6" id="accordionFlushExample4">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="progressiva-1">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#progressiva-p" aria-expanded="false" aria-controls="progressiva-p">
+                          Progressiva ou Botox Tam P
+                      </button>
+                    </h2>
+                    <div id="progressiva-p" class="accordion-collapse collapse" aria-labelledby="progressiva-1" data-bs-parent="#accordionFlushExample4">
+                      <div class="accordion-body"> 
+                        <p class="produto-preco">R$100,00</p>
+                        <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                      </div>
+                    </div>                    
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="progressiva-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#progressiva-m" aria-expanded="false" aria-controls="progressiva-m">
+                      Progressiva ou Botox Tam M
+                    </button>
+                  </h2>
+                  <div id="progressiva-m" class="accordion-collapse collapse" aria-labelledby="progressiva-2" data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+                        <p class="produto-preco">R$150,00</p>
+                        <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="progressiva-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#progressiva-g" aria-expanded="false" aria-controls="progressiva-g">
+                      Progressiva ou Botox Tam G
+                    </button>
+                  </h2>
+                  <div id="progressiva-g" class="accordion-collapse collapse" aria-labelledby="progressiva-3" data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+                      <p class="produto-preco">R$200,00</p>
+                        <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+        </section>
+        
+        <section class="separator" id="escova">
+          <h2>Escova</h2>
+          <img src="../img/escova.jpg" />
+          <p class="produto-descricao">Escova com ou sem chapinha</p>    
+          <div class="accordion accordion-flush col-6" id="accordionFlushExample5">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="escova-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#escova-p" aria-expanded="false" aria-controls="escova-p">
+                      Escova Tam P
+                    </button>
+                  </h2>
+                  <div id="escova-p" class="accordion-collapse collapse" aria-labelledby="escova-1" data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body"> 
+                      <p class="produto-preco">R$60,00</p>
+                      <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                    </div>
+                  </div>                    
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="escova-2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#escova-m" aria-expanded="false" aria-controls="escova-m">
+                    Escova Tam M
+                  </button>
+                </h2>
+                <div id="escova-m" class="accordion-collapse collapse" aria-labelledby="escova-2" data-bs-parent="#accordionFlushExample5">
+                  <div class="accordion-body">
+                    <p class="produto-preco">R$80,00</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="escova-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#escova-g" aria-expanded="false" aria-controls="escova-g">
+                    Escova Tam G
+                  </button>
+                </h2>
+                <div id="escova-g" class="accordion-collapse collapse" aria-labelledby="escova-3" data-bs-parent="#accordionFlushExample5">
+                  <div class="accordion-body">
+                    <p class="produto-preco">R$100,00</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                  </div>
+                </div>
+              </div>
+          </div> 
+        </section>
+        
+        <section class="separator" id="tratamento">
+          <h2>Tratamento</h2>
+          <img src="../img/tratamento.png" />
+          <p class="produto-descricao">
+            Hidratação, Nutrição ou Reconstrução
+          </p>   
+          <div class="accordion accordion-flush col-6" id="accordionFlushExample6">
+              <div class="accordion-item">
+                  <h2 class="accordion-header" id="tratamento-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tratamento-p" aria-expanded="false" aria-controls="tratamento-p">
+                      Tratamento Tam P
+                    </button>
+                  </h2>
+                  <div id="tratamento-p" class="accordion-collapse collapse" aria-labelledby="tratamento-1" data-bs-parent="#accordionFlushExample6">
+                    <div class="accordion-body"> 
+                      <p class="produto-preco">R$70,00</p>
+                      <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                    </div>
+                  </div>                    
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="tratamento-2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tratamento-m" aria-expanded="false" aria-controls="tratamento-m">
+                    Tratamento Tam M
+                  </button>
+                </h2>
+                <div id="tratamento-m" class="accordion-collapse collapse" aria-labelledby="tratamento-2" data-bs-parent="#accordionFlushExample6">
+                  <div class="accordion-body">
+                    <p class="produto-preco">R$90,00</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="tratamento-3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tratamento-g" aria-expanded="false" aria-controls="tratamento-g">
+                    Tratamento Tam G
+                  </button>
+                </h2>
+                <div id="tratamento-g" class="accordion-collapse collapse" aria-labelledby="tratamento-3" data-bs-parent="#accordionFlushExample6">
+                  <div class="accordion-body">
+                    <p class="produto-preco">R$110,00</p>
+                    <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                  </div>
+                </div>
+              </div>
+          </div> 
+        </section>  
+         
+        <h2 id="mao-pe">Cuidade de suas mãos e pés</h2>
+
+        <section class="separator" id="manicure">
+          <h2>Manicure</h2>
+          <img src="../img/manicure.png" />
+          <p class="produto-descricao">Cutilagem e pintura</p>
+          <div class="accordion accordion-flush col-6" id="accordionPanelsStayOpenExample7">             
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="manicure-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#manicure-p" aria-expanded="true" aria-controls="manicure-p">
+                    Manicure
+                  </button>
+                </h2>
+                <div id="manicure-p" class="accordion-collapse collapse" aria-labelledby="manicure-1" data-bs-parent="#accordionFlushExample7">
+                  <div class="accordion-body"> 
+                    <p class="produto-preco">R$30,00</p>
+                      <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                  </div>
+                </div>                    
+            </div>              
+            
+        </section>  
+         
+        <section class="separator" id="pedicure">
+          <h2>Pedicure</h2>
+          <img src="../img/pedicure.png" />
+          <p class="produto-descricao">Cutilagem, pintura e spa dos pés</p>
+          <div class="accordion accordion-flush col-6" id="accordionPanelsStayOpenExample8">             
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="pedicure-1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pedicure-p" aria-expanded="true" aria-controls="pedicure-p">
+                    Pedicure
+                  </button>
+                </h2>
+                <div id="pedicure-p" class="accordion-collapse collapse" aria-labelledby="pedicure-1" data-bs-parent="#accordionFlushExample8">
+                  <div class="accordion-body"> 
+                    <p class="produto-preco">R$50,00</p>
+                      <input class="btn" type="submit" value="Adicionar ao carrinho" onclick="botao()"/>
+                  </div>
+                </div>                    
+            </div>               
+        </section>           
+      </div>
+      <footer class="footer text-center">
+        <a class="text-uppercase" href="../Contato/contato.html"
+          >Entre em contato</a
+        >
+        <p class="text-uppercase">COPYRIGHT © 2022 AMOR DE MÃE</p>
+      </footer>
+    </main>
+
+    <script type="text/javascript">
+      function botao() {
+        location.href = "../Cesta/cesta.html";
+      }
+    </script>
+  </body>
 </html>

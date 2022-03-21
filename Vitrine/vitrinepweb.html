@@ -46,8 +46,21 @@
         </div>
         <div class="menu">
           <ul class="d-flex justify-content-evenly m-0">
-            <li><a href="vitrinepweb.html">Home</a></li>
-            <li><a href="../Produto/produtodetalhe.html">Serviços</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Serviços</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../Produto/produtodetalhe.html#luzes">Cabelos</a></li>
+                <li><a class="dropdown-item" href="../Produto/produtodetalhe.html#mao-pe">Manicure e Pedicure</a></li>
+                
+              </ul>
+            </li>
             <li><a href="../Contato/contato.html">Contato</a></li>
             <li><a href="../Cesta/cesta.html">Cesta</a></li>
             <li><a href="../Login/login.html">Login</a></li>
@@ -61,110 +74,114 @@
         <img src="../img/banner-1.jpg" alt="" />
         <h2 class="text-uppercase"><i>Você na sua melhor versão</i></h2>
       </section>
-      
-      <section class="produtos">
-        <h2 class="text-center">Conheça os nossos serviços</h2>
-        <div class="group card-deck d-grid">
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/luzes.jfif"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Luzes</h5>
-              <p class="card-text">Iluminação ou Global</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
+      <div class="container">
+        <section class="produtos">
+          <h2 class="text-center">Conheça os nossos serviços</h2>
+          <div class="group card-deck d-grid">
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/luzes.jfif"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Luzes</h5>
+                <p class="card-text">Iluminação ou Global</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/coloração.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Coloração</h5>
+                <p class="card-text">Escolha o tom da sua preferência</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/corte.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Corte</h5>
+                <p class="card-text">Várias opções e estilos</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/progressiva.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Progressiva ou Botox</h5>
+                <p class="card-text">Cabelos lisos e alinhados</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/escova.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body .align-bottom">
+                <h5 class="card-title">Escova</h5>
+                <p class="card-text">Escova com ou sem chapinha</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/tratamento.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Tratamento</h5>
+                <p class="card-text">Hidratação, Nutrição ou Reconstrução</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/manicure.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Manicure</h5>
+                <p class="card-text">Cutilagem e pintura</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="../img/pedicure.png"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Pedicure</h5>
+                <p class="card-text">Cutilagem, pintura e spa dos pés</p>
+                <a href="#" onclick="botao()" class="btn">Selecionar</a>
+              </div>
             </div>
           </div>
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/coloração.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Coloração</h5>
-              <p class="card-text">Escolha o tom da sua preferência</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/corte.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Corte</h5>
-              <p class="card-text">Várias opções e estilos</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/progressiva.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Progressiva ou Botox</h5>
-              <p class="card-text">Cabelos lisos e alinhados</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/escova.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body .align-bottom">
-              <h5 class="card-title">Escova</h5>
-              <p class="card-text">Escova com ou sem chapinha</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/tratamento.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Tratamento</h5>
-              <p class="card-text">Hidratação, Nutrição ou Reconstrução</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/manicure.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Manicure</h5>
-              <p class="card-text">Cutilagem e pintura</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="../img/pedicure.png"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Pedicure</h5>
-              <p class="card-text">Cutilagem, pintura e spa dos pés</p>
-              <a href="#" onclick="botao()" class="btn">Selecionar</a>
-            </div>
-          </div>          
-        </div>        
-      </section>      
+        </section>
+      </div>
+
       <footer class="footer text-center">
-        <a class="text-uppercase" href="../Contato/contato.html">Entre em contato</a>
+        <a class="text-uppercase" href="../Contato/contato.html"
+          >Entre em contato</a
+        >
         <p class="text-uppercase">COPYRIGHT © 2022 AMOR DE MÃE</p>
       </footer>
     </main>

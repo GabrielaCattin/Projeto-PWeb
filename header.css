@@ -1,5 +1,6 @@
 body {
     overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
 }
 
 main {
@@ -37,6 +38,10 @@ form .form-control {
 
 .menu {
     width: 100%;
+}
+
+.nav-link {
+    color: currentColor;
 }
 
 .pesquisa {
