@@ -12,20 +12,9 @@ body {
 }
 
 .models {
-    /*display: none; */
+    display: none;
 }
 
-header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 60px;
-    background-color: #A2AD91;
-    /*display: none;*/
-    justify-content: flex-end;
-    align-items: center;
-}
 
 .menu-openner {
     margin-right: 15px;
@@ -42,7 +31,7 @@ header {
 .menu-closer {
     width: 32px;
     height: 32px;
-    /*display: none;*/
+    display: none;
     font-size: 30px;
 }
 
@@ -63,6 +52,7 @@ aside.show{
 }
 
 main {
+    width: 100%;
     flex: 1;
     padding: 20px;
 }
@@ -93,8 +83,7 @@ h1 {
 .models-item--img {
     width: 200px;
     height: 200px;
-    background-color: #FFE3DC;
-    border-radius: 100px;
+    border-radius: 20px;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.2);
 }
 
@@ -147,7 +136,7 @@ h1 {
     bottom: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.5);
-    /*display: none;*/
+    display: none;
     transition: all ease .5s;
     justify-content: center;
     align-items: center;
@@ -207,7 +196,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-.models--sizes {
+.models--size {
     display: inline-flex;
     border-radius: 10px;
     overflow: hidden;
@@ -226,3 +215,273 @@ h1 {
     background-color: #D30C7B;
 }
 
+.modelsInfo--size.selected {
+    background-color: #DBB4AD;
+    color: #D30C7B;
+}
+
+.modelsInfo--size.selected span {
+    color: #FFE3DC;
+}
+
+.models--size span {
+    font-size: 12px;
+    color: #D30C7B;
+    font-weight: normal;
+}
+
+.modelsInfo--price {
+    display: flex;
+    align-items: center;
+}
+
+.modelsInfo--actualprice {
+    font-size: 28px;
+    margin-right: 30px;
+}
+
+.modelsInfo--qtarea {
+    display: inline-flex;
+    background-color: #3A2D32;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.modelsInfo--qtarea button {
+    border: 0;
+    background-color: #DBB4AD;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #D30C7B;
+}
+
+.modelsInfo--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 5px;
+    color: #000;
+}
+
+.modelsInfo--addButton {
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #FFE3DC;
+    color: #D30C7B;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.modelsInfo--addButton:hover {
+    background-color: #999;
+}
+
+.modelsInfo--cancelButton {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.modelsInfo--cancelMobileButton {
+    display: none;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.cart {
+    margin-bottom: 20px;
+}
+
+.cart--item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.cart--item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.cart--item-nome {
+    flex: 1;
+}
+
+.cart--item--qtarea {
+    display: inline-flex;
+    background-color: #D30C7B;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.cart--item--qtarea button {
+    border: 0;
+    background-color: transparent;
+    font-size: 17px;
+    outline: 0;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #3A2D32;
+}
+
+.cart--item--qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 5px;
+    color: #000;
+}
+
+.cart--totalitem {
+    padding: 15px 0;
+    border-top: 1px solid #FFE3DC;
+    color: #DBB4AD;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.cart--totalitem spa:first-child {
+    font-weight: bold;
+}
+
+.cart--totalitem.big {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+.cart--finalizar {
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: #D30C7B;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #A2AD91;
+}
+
+.cart--finalizar:hover {
+    background-color: #D30C7B;
+}
+
+@media (max-width: 1000px) {
+    .models-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 840px) {
+    body {
+        flex-direction: column;
+    }
+
+    .models-area {
+        display: block;
+    }
+
+    .models-item {
+        max-width: 100%;
+    }
+
+    header {
+        display: flex;
+    }
+
+    main {
+        padding-top: 60px;
+    }
+
+    aside {
+        width: auto;
+        position: fixed;
+        left: 100vw;
+        right: 0;
+        top: 0;
+        bottom: 0; transition: all ease .2s;
+    }
+
+    aside.show {
+        width: auto;
+    }
+
+    .cart--area {
+        width: 100vw;
+    }
+
+    .menu-closer {
+        display: block;
+    }
+
+    .modelsWindowArea {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .modelsWindowBody {
+        width: 100vw;
+        display: block;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+
+    .modelsBig img {
+        width: 75%;
+        height: auto;
+    }
+
+    .modelsInfo h1 {
+        margin-top: 20px;
+    }
+
+    .modelsInfo--qtarea {
+        height: 60px;
+    }
+
+    .modelsInfo--qtarea button{
+        font-size: 25px;
+        padding: 0 25px;
+    }
+
+    .modelsInfo--qt {
+        line-height: 60px;
+        font-size: 20px;
+    }
+
+    .modelsInfo--addButton {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        margin: 30px auto;
+    }
+
+    .modelsInfo--cancelButton {
+        display: none;
+    }
+
+    .modelsInfo--cancelMobileButton {
+        display: block;
+    }
+
+    .menu-openner {
+        margin-right: 5px;
+        font-size: 5px;
+        background-color: #D30C7B;
+        padding: 5px 5px;
+        border-radius: 5px;
+    }
+    
+    .menu-openner span {
+        margin-right: 10px;
+    }
+    
+}

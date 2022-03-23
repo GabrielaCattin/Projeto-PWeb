@@ -24,45 +24,44 @@
         <link rel="stylesheet" href="../footer.css" />
     </head>
     <body>
-      <header>
-        <nav class="navbar">
-          <div class="caixa d-flex justify-content-between align-items-center">
-            <h1><img class="rounded-circle" src="../img/Amor de Mãe.png" /></h1>
-            <form class="pesquisa form-inline my-2 my-lg-0 d-flex">
-              <input
-                class="form-control mr-sm-2"
-                type="search"
-                placeholder="Busca"
-                aria-label="Search"
-              />
-              <button id="buscar" class="btn my-2 my-sm-0" type="submit">
-                Buscar
-              </button>
-            </form>
-            <div class="menu-openner">
-              <span>0</span>
-              <span class="material-icons">shopping_cart</span>
-            </div>
-            <div class="cadastro">
-              <a id="cadastro" href="cadastro.html">
-                <img src="../img/avatar.png" alt="Cadastro" />
-                Entre ou Cadastre-se
-              </a>
-            </div>
-          </div>
-          <div class="menu">
-            <ul class="d-flex justify-content-evenly m-0">
-              <li><a href="../Vitrine/vitrinepweb.html">Home</a></li>
-              <li><a href="../Produto/produtodetalhe.html">Serviços</a></li>
-              <li><a href="../Contato/contato.html">Contato</a></li>
-              <li><a href="../Cesta/cesta.html">Cesta</a></li>
-              <li><a href="../Login/login.html">Login</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
       <main>
+        <header>
+          <nav class="navbar">
+            <div class="caixa d-flex justify-content-between align-items-center">
+              <h1><img class="rounded-circle" src="../img/Amor de Mãe.png" /></h1>
+              <form class="pesquisa form-inline my-2 my-lg-0 d-flex">
+                <input
+                  class="form-control mr-sm-2"
+                  type="search"
+                  placeholder="Busca"
+                  aria-label="Search"
+                />
+                <button id="buscar" class="btn my-2 my-sm-0" type="submit">
+                  Buscar
+                </button>
+              </form>
+              <div class="menu-openner">
+                <span>0</span>
+                <span class="material-icons">shopping_cart</span>
+              </div>
+              <div class="cadastro">
+                <a id="cadastro" href="cadastro.html">
+                  <img src="../img/avatar.png" alt="Cadastro" />
+                  Entre ou Cadastre-se
+                </a>
+              </div>
+            </div>
+            <div class="menu">
+              <ul class="d-flex justify-content-evenly m-0">
+                <li><a href="../Vitrine/vitrinepweb.html">Home</a></li>
+                <li><a href="../Produto/produtodetalhe.html">Serviços</a></li>
+                <li><a href="../Contato/contato.html">Contato</a></li>
+                <li><a href="../Cesta/cesta.html">Cesta</a></li>
+                <li><a href="../Login/login.html">Login</a></li>
+              </ul>
+            </div>
+          </nav>
+        </header>
         <div class="models">
           <h1>Cesta</h1>
           <div class="models-item">
@@ -85,12 +84,15 @@
             </div>
           </div>
         </div>
+        <h1>Serviços</h1>
+        <div class="models-area"></div>
       </main>
       <aside>
         <div class="cart--area">
           <div class="menu-closer">
             <span class="material-icons">close</span>
           </div>
+          <h1>Seus Pedidos</h1>
           <div class="cart--details">
             <div class="cart--totalitem subtotal">
               <span>Subtotal</span>
@@ -110,11 +112,11 @@
             <h1>--</h1>
             <div class="modelsInfo--desc">--</div>
             <div class="modelsInfo--sizearea">
-              <div class="modelsInfo--sector">Escala</div>
+              <div class="modelsInfo--sector">Tamanhos</div>
               <div class="modelsIndo--sizes">
-                <div data-key="0" class="modelsInfo--size">1/72<span>--</span></div>
-                <div data-key="1" class="modelsInfo--size">1/48<span>--</span></div>
-                <div data-key="2" class="modelsInfo--size selected">1/32<span>--</span></div>
+                <div data-key="0" class="modelsInfo--size">P<span>--</span></div>
+                <div data-key="1" class="modelsInfo--size">M<span>--</span></div>
+                <div data-key="2" class="modelsInfo--size selected">G<span>--</span></div>
               </div>
             </div>
           </div>
@@ -136,8 +138,7 @@
       <script type="text/javascript" src="js/models.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
     </body>
-    <footer class="footer text-center">
-      <a class="text-uppercase" href="../Contato/contato.html">Entre em contato</a>
-      <p class="text-uppercase">COPYRIGHT © 2022 AMOR DE MÃE</p>
-    </footer>
+  
+    <script type="text/javascript" src="../Cesta/js/models.js"></script>
+    <script type="text/javascript" src="../Cesta/js/script.js"></script>
 </html>
