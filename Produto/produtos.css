@@ -1,3 +1,8 @@
+.separator .accordion {
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
 .accordion-button:not(.collapsed) {
     background-color: #d30c7b;
     color: #ffffff;
@@ -12,4 +17,19 @@
 
 .separator {
     border-bottom: 2px solid #d30c7b;
+}
+
+img.img-thumbnail {
+    width: 200px;
+    height: 200px;
+}
+
+.separator h2, .produto-descricao {
+    color: #d30c7b;
+    font-weight: 700;
+}
+
+#cabelo, #mao-pe {
+    margin-top: 20px;
+    font-weight: 700;
 }
