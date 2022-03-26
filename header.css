@@ -64,6 +64,11 @@ li a {
     background-color: #dbb4ad;
     color: #fff;
 }
+.btn:hover {
+    border-color: #dbb4ad;
+    background-color: #dbb4ad;
+    color: #fff;
+}
 
 .nav-link {
     padding: 0;
