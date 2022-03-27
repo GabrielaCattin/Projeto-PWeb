@@ -4,7 +4,7 @@ var total = document.getElementById('valorTotal');
 var valorServico;
 var valorTotalCompra;
 
-resumo.innerHTML ='<p><strong> Descrição do Produto </strong></p>' + sessionStorage.descricao +'<strong></br>'+ sessionStorage.preco + '</strong>';
+resumo.innerHTML = sessionStorage.nome+ '<br/>'+sessionStorage.descricao+'<strong></br>'+sessionStorage.preco+'</strong>';
 
 qtdeProduto.addEventListener('change', calculaValorTotalCompra);
 valorServico = sessionStorage.preco; 
@@ -12,7 +12,7 @@ valorServico = valorServico.replaceAll('R$', ' ');
 
 function calculaValorTotalCompra(){
     valorServico = Number(valorServico);
-    valorTotalCompra = valorServico * qtdeProduto.value;
+    valorTotalCompra = valorServico*qtdeProduto.value;
     total.innerHTML = '<p><strong> Valor Total da Compra: </strong></p>' + '<strong>R$' + valorTotalCompra +'</strong>';
 }
 

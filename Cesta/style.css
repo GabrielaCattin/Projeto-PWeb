@@ -11,6 +11,10 @@
     width: 100px;
 }
 
+.msg {
+    min-width: 1500px !important;
+}
+
 @media screen and (max-widht: 780px){
     #txtNome{
         width: 100%;
