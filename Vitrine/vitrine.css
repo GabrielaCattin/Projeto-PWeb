@@ -1,0 +1,59 @@
+.banner {
+    position: relative;    
+}
+.banner img {
+    height: 550px;
+    width: 100%;
+    filter: brightness(0.7);    
+}
+
+.banner h2 {
+    position: absolute;
+    top: 2em;
+    right: 1em;
+    color: #fff;
+    font-weight: 700;
+    width: 45%;
+}
+
+.produtos {
+    padding: 20px 0px;    
+}
+
+.produtos h2 {
+    font-size: 54px;
+    color: rgb(64, 64, 64);
+    padding: 30px 0;
+    font-weight: 700;
+}
+
+.card {
+    border-color: #d30c7b;
+    height: 380px;    
+}
+
+.row {
+    gap: 20px 0;
+}
+
+.card img {
+    height: 200px;
+}
+
+@media (max-width: 600px) {
+    .banner img {
+        height: 400px;        
+    }
+
+    .banner h2 {
+        top: 4em;
+        width: 75%;
+    }
+
+    .card {
+        height: auto;
+    }
+    .card img {
+        height: 400px;
+    }
+}

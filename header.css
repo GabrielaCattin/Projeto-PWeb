@@ -13,6 +13,7 @@ main {
     font-family: 'Oswald', sans-serif;
 }
 
+
 .caixa {
     width: 100%;
     border-bottom: 1px solid rgb(160, 158, 158);
@@ -36,30 +37,22 @@ form .form-control {
     width: 40px;
 }
 
-.menu {
-    width: 100%;
-}
-
-.nav-link {
-    color: currentColor;
-}
-
 .pesquisa {
     gap: 10px;
+    display: flex;
 }
 
-li{
-    list-style: none;
-    margin: 15px;     
-}
+li{    
+    margin: 15px 20px;     
+} 
 
-li a {
-    color: rgb(64, 64, 64);
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(64, 64, 64) !important;
     text-decoration: none;  
-    font-weight: 700; 
+    font-weight: 700 !important; 
 }
 
-.btn {
+.btn, #buscar {
     border-color: #dbb4ad;
     background-color: #dbb4ad;
     color: #fff;
@@ -74,3 +67,17 @@ li a {
     padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+button.navbar-toggler {
+    background-color: #d30c7b;   
+}
+
+@media (max-width: 768px) {
+    .pesquisa {
+        display: none !important;
+    }
+}
+
+
+>>>>>>> 761770d5f007a637774511641b778183ab3ae4a2
