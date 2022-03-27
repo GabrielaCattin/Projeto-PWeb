@@ -71,10 +71,16 @@ button.navbar-toggler {
     background-color: #d30c7b;   
 }
 
+.input-group-text{
+    border-color: #dbb4ad;
+    background-color: #dbb4ad;
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .pesquisa {
         display: none !important;
     }
 }
-
+ 
 
