@@ -3,6 +3,7 @@
 }
 
 #jumbotronResumo {
+<<<<<<< HEAD
     background-color: #FFE3DC;
 }
 
@@ -31,3 +32,22 @@ img.img-thumbnail {
         width: 100%;
     }
 }
+=======
+    background-color: #FFE3DC;
+}
+
+#btn1 {
+    background-color: #FFE3DC;
+    width: 100px;
+}
+
+.msg {
+    min-width: 1500px !important;
+}
+
+@media screen and (max-widht: 780px){
+    #txtNome{
+        width: 100%;
+    }
+}
+>>>>>>> 3b036b6826706087477246d0486f797e3beab6a6
