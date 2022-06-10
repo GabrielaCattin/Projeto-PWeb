@@ -12,7 +12,7 @@
       <nav class="flex-wrap navbar navbar-expand-sm navbar-dark">
         <div class="container-fluid">
         <div class="caixa d-flex justify-content-between align-items-center">
-          <a href="../Vitrine/vitrinepweb.html"><img class="mb-1 rounded-circle" src="../img/Amor de Mãe.png" /></a>
+          <a href="../Vitrine/vitrine.php"><img class="mb-1 rounded-circle" src="../imagens/Amor de Mãe.png" /></a>
                   
             <form method="post" action="../Busca/listaProduto.php" class="pesquisa form-inline my-2 my-lg-0">
               <input
@@ -28,7 +28,7 @@
             </form>
             <div class="cadastro">
               <a id="cadastro" href="../Login/Cadastro.html">
-                <img src="../img/avatar.png" alt="Cadastro" />
+                <img src="../imagens/avatar.png" alt="Cadastro" />
                 Cadastro
               </a>
             </div>
@@ -40,7 +40,7 @@
         <div class="menu justify-content-evenly collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="../Vitrine/vitrinepweb.html">Home</a>
+              <a class="nav-link" href="../Vitrine/vitrine.php">Home</a>
             </li>
             
             <li class="nav-item dropdown">

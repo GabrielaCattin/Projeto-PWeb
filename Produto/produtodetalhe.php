@@ -124,7 +124,7 @@ function listar(){
             <div class=accordion-item>
                 <h2 class=accordion-header id=manicure-1>
                   <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#manicure-p aria-expanded=true aria-controls=manicure-p>
-                    $descricao
+                    $tamanhop
                   </button>
                 </h2>
                 <div id=manicure-p class=accordion-collapse collapse aria-labelledby=manicure-1 data-bs-parent=#accordionFlushExample7>

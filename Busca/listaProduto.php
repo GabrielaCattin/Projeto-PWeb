@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../footer.css" />
   </head>
 <body>
+  <?php include("../header.php");?>
 	<div class="container">
     <section class="produtos">
       <h1 class="text-center">Resultado da busca</h1>
@@ -34,6 +35,7 @@
       </div>
     </section>
 	</div>	
+  <?php include("../footer.php");?>
 </body>
 </html>
 <?php
