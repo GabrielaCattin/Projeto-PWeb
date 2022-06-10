@@ -1,6 +1,7 @@
 .banner {
     position: relative;    
 }
+
 .banner img {
     height: 550px;
     width: 100%;
@@ -34,6 +35,10 @@
 
 .row {
     gap: 20px 0;
+}
+
+.lista {
+    padding: 20px !important;
 }
 
 .card img {
