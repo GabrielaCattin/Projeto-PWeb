@@ -17,10 +17,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Oswald:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="vitrine.css" /> -->
     <link rel="stylesheet" href="produtos.css" />
     <link rel="stylesheet" href="../header.css" />
     <link rel="stylesheet" href="../footer.css" />
+    
   </head>
   <body>
     <?php include("../header.php");?>
@@ -33,23 +35,16 @@
       <?php include("../footer.php");?>
       
     </main>    
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
+   
   </body>
 </html>
 <?php
 function listar(){
 	$conexao=	new mysqli("localhost", "root", "", "projeto");
-	if(isset($_GET["codigo"])){
-		$codigo = $_GET["codigo"];
-		$sql = "select * from produto where codigo=$codigo";	
-	} else {
-		$sql = "select * from produto order by nome";
-	}		
-	$resultado = mysqli_query($conexao, $sql);
+  $sql = "select * from produto";
+			
+	$resultado = mysqli_query($conexao, $sql); 
+
 	while($reg = mysqli_fetch_array($resultado)){
 		$codigo = $reg["codigo"];
 		$nome = $reg["nome"];
@@ -62,33 +57,41 @@ function listar(){
     $precog = $reg["precog"];
 
     if(!empty($tamanhom)) {
+
+      if($codigo == 1 ) {
+        echo "
+        <h2 id=cabelo>Escolha o serviço de acordo com o tamanho do seu cabelo.</h2>
+        ";
+      }
       echo "
       
-      <section class=separator id=luzes>
+      <section class=separator id=$nome>
       <h2 class=pt-3 pb-3>$nome</h2>
       <img class=img-thumbnail src=../imagens/$codigo.jpg id=imgcompra />
       <p class=produto-descricao>$descricao</p> 
+
       <div class='shadow-lg accordion accordion-flush col-6 id=accordionFlushExample'>
         <div class=accordion-item>
-          <h2 class=accordion-header id=luzes-1>
-            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#luzes-p aria-expanded=false aria-controls=luzes-p>
+          <h2 class=accordion-header id=$nome-$tamanhop>
+            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhop aria-expanded=false aria-controls=flush-$nome-$tamanhop>
               $tamanhop
             </button>
           </h2>
-          <div id=luzes-p class=accordion-collapse collapse aria-labelledby=luzes-1 data-bs-parent=#accordionFlushExample>
+          <div id=flush-$nome-$tamanhop class=accordion-collapse collapse aria-labelledby=$nome-$tamanhop data-bs-parent=#accordionFlushExample>
             <div class=accordion-body> 
                 <p class=produto-preco id=produto-preco>$precop</p>
                 <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
             </div>
           </div>
         </div>
+
         <div class=accordion-item>
-          <h2 class=accordion-header id=luzes-2>
-            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#luzes-m aria-expanded=false aria-controls=luzes-m>
+          <h2 class=accordion-header id=$nome-$tamanhom>
+            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhom aria-expanded=false aria-controls=#flush-$nome-$tamanhom>
             $tamanhom
             </button>
           </h2>
-          <div id=luzes-m class=accordion-collapse collapse aria-labelledby=luzes-2 data-bs-parent=#accordionFlushExample>
+          <div id=flush-$nome-$tamanhom class=accordion-collapse collapse aria-labelledby=$nome-$tamanhom data-bs-parent=#accordionFlushExample>
             <div class=accordion-body>
                 <p class=produto-preco id=produto-preco>$precom</p>
                 <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
@@ -96,12 +99,12 @@ function listar(){
           </div>
         </div>
         <div class=accordion-item>
-          <h2 class=accordion-header id=luzes-3>
-            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#luzes-g aria-expanded=false aria-controls=luzes-g>
+          <h2 class=accordion-header id=$nome-$tamanhog>
+            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhog aria-expanded=false aria-controls=#flush-$nome-$tamanhog>
             $tamanhog
             </button>
           </h2>
-          <div id=luzes-g class=accordion-collapse collapse aria-labelledby=luzes-3 data-bs-parent=#accordionFlushExample>
+          <div id=flush-$nome-$tamanhog class=accordion-collapse collapse aria-labelledby=$nome-$tamanhog data-bs-parent=#accordionFlushExample>
             <div class=accordion-body>
                 <p class=produto-preco id=produto-preco>R$ $precog</p>
                 <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
@@ -114,20 +117,25 @@ function listar(){
     </section>
       ";	
     } else {
+      if($codigo == 7 ) {
+        echo "
+        <h2 id=mao-pe>Cuide de suas mãos e pés</h2>
+        ";
+      }
       echo "
       
-      <section class=separator id=manicure>
+      <section class=separator id=$codigo>
           <h2 class=pt-3 pb-3>$nome</h2>
           <img class=img-thumbnail src=../imagens/$codigo.jpg id=imgcompra/>
           <p class=produto-descricao id=produto-descricao>$descricao</p>
           <div class='shadow-lg accordion accordion-flush col-6' id=accordionPanelsStayOpenExample7>             
             <div class=accordion-item>
-                <h2 class=accordion-header id=manicure-1>
-                  <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#manicure-p aria-expanded=true aria-controls=manicure-p>
+                <h2 class=accordion-header id=$nome-$tamanhop>
+                  <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhop aria-expanded=true aria-controls=flush-$nome-$tamanhop>
                     $tamanhop
                   </button>
                 </h2>
-                <div id=manicure-p class=accordion-collapse collapse aria-labelledby=manicure-1 data-bs-parent=#accordionFlushExample7>
+                <div id=flush-$nome-$tamanhop class=accordion-collapse collapse aria-labelledby=$nome-$tamanhop data-bs-parent=#accordionFlushExample7>
                   <div class=accordion-body> 
                     <p class=produto-preco id=produto-preco>R$$precop</p>
                       <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
