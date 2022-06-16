@@ -40,7 +40,7 @@
 </html>
 <?php
 function listar(){
-	$conexao=	new mysqli("localhost", "root", "", "projeto");
+	$conexao=	new mysqli("localhost", "root", "37873651", "projeto");
   $sql = "select * from produto";
 			
 	$resultado = mysqli_query($conexao, $sql); 

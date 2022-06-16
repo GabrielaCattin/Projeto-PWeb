@@ -56,7 +56,6 @@
 
                     <button class="btn btn-lg btn-danger" type="button" onclick="validar();">Enviar Mensagem</button>
                 </form>
-				<?php enviarEmail(); ?>
             </div>
 			
                     <p class="mt-3">
@@ -101,7 +100,6 @@
     }
 </script>
 <?php 
-function enviarEmail(){
     if(isset($_GET["enviar"])){
         $nome = $_POST["nome"];
         $email = $_POST["email"];
@@ -124,5 +122,4 @@ function enviarEmail(){
 			echo "<h4>Ocorreu um erro no envio de email</h4>";
 		}
     }
-}
 ?>
