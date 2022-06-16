@@ -29,3 +29,11 @@ drop table produto;
 
 select * from produto;
 
+create table cesta (
+codigo bigint primary key auto_increment,
+codigoProduto bigint,
+descricao varchar(100),
+valor numeric(18, 2),
+quantidade int(3),
+sessionId varchar(100)
+);
