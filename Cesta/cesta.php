@@ -39,17 +39,18 @@
 function listarcesta(){
     session_start();
     $sessionId = session_id();
-    $conexao = new mysqli("localhost", "root", "37873651", "projeto");
-    $sql = "select p.codigo, p.descricao, c.quantidade, c.valor, c.valor*c.quantidade as total  from produto p inner join cesta c on p.codigo=c.codigoProduto where c.sessionId = '$sessionId' order by nome";
+    $conexao = new mysqli("localhost", "root", "", "projeto");
+    $sql = "select p.codigo, p.descricao, p.nome, c.quantidade, p.precop, p.precom, p.precog from produto p inner join cesta c on p.codigo=c.codigoProduto where c.sessionId = '$sessionId' order by nome";
 
     $resultado = mysqli_query($conexao, $sql);
     while($reg = mysqli_fetch_array($resultado)) {
         $nome = $reg["nome"];
         $descricao = $reg["descricao"];
         $codigo = $reg["codigo"];
-        $valor = $reg["valor"];
+        $precop = $reg["precop"];
+        $precom = $reg["precom"];
+        $precog = $reg["precog"];
         $quantidade = $reg["quantidade"];
-        $total = $reg["total"];
 
         echo "
         <div class=col-xl-3 col-md-6 col-sm-12>
@@ -58,8 +59,11 @@ function listarcesta(){
           <div class=card-body>
             <h5 class=card-title><tr>$nome</h5>
             <p class=card-text>$descricao</p>
-            <p class=card-text>$valor</p>
-            <p class=card-text>$total</p>    
+            <p class=card-text>$precop</p>
+            <p class=card-text>$precom</p>
+            <p class=card-text>$precog</p>
+            <p class=card-text>Quantidade: $quantidade</p>
+            
             <input class=btn type=submit value=Finalizar Compra onclick=window.location.href='../Cesta/finalizarcompra.html'/>    
           </div>   
         </div>

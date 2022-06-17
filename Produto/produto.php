@@ -40,7 +40,7 @@
 </html>
 <?php
 function listar(){
-	$conexao=	new mysqli("localhost", "root", "37873651", "projeto");
+	$conexao=	new mysqli("localhost", "root", "", "projeto");
   $sql = "select * from produto";
 			
 	$resultado = mysqli_query($conexao, $sql); 
@@ -79,8 +79,9 @@ function listar(){
           </h2>
           <div id=flush-$nome-$tamanhop class=accordion-collapse collapse aria-labelledby=$nome-$tamanhop data-bs-parent=#accordionFlushExample>
             <div class=accordion-body> 
-                <p class=produto-preco id=produto-preco>$precop</p>
-                <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                <a class=produto-preco id=$nome-$precop>$precop</a>
+                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
+                
             </div>
           </div>
         </div>
@@ -94,7 +95,8 @@ function listar(){
           <div id=flush-$nome-$tamanhom class=accordion-collapse collapse aria-labelledby=$nome-$tamanhom data-bs-parent=#accordionFlushExample>
             <div class=accordion-body>
                 <p class=produto-preco id=produto-preco>$precom</p>
-                <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
+               
             </div>
           </div>
         </div>
@@ -107,7 +109,8 @@ function listar(){
           <div id=flush-$nome-$tamanhog class=accordion-collapse collapse aria-labelledby=$nome-$tamanhog data-bs-parent=#accordionFlushExample>
             <div class=accordion-body>
                 <p class=produto-preco id=produto-preco>R$ $precog</p>
-                <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
+                
             </div>
           </div>
         </div>
@@ -138,7 +141,8 @@ function listar(){
                 <div id=flush-$nome-$tamanhop class=accordion-collapse collapse aria-labelledby=$nome-$tamanhop data-bs-parent=#accordionFlushExample7>
                   <div class=accordion-body> 
                     <p class=produto-preco id=produto-preco>R$$precop</p>
-                      <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                    <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
+                      
                   </div>
                 </div>                    
             </div>              

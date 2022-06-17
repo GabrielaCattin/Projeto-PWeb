@@ -26,7 +26,7 @@
    
     <main>
       <section class="banner">
-        <img src="../img/banner-1.jpg" alt="" />
+        <img src="../imagens/banner-1.jpg" alt="" />
         <h2 class="display-1 text-uppercase"><i>Você na sua melhor versão</i></h2>
       </section>
       <div class="container">
@@ -47,13 +47,13 @@
           <!-- The slideshow/carousel -->
           <div class="carousel-inner">
             <div class="carousel-item mb-3 active">
-              <img src="../img/antesedepois1.jpg" alt="Los Angeles" class="d-block" style="height:90vh; width: 100%;">
+              <img src="../imagens/antesedepois1.jpg" alt="Los Angeles" class="d-block" style="height:90vh; width: 100%;">
             </div>
             <div class="carousel-item mb-3">
-              <img src="../img/antesedepois2.jpg" alt="Chicago" class="d-block" style="height:90vh; width: 100%;">
+              <img src="../imagens/antesedepois2.jpg" alt="Chicago" class="d-block" style="height:90vh; width: 100%;">
             </div>
             <div class="carousel-item mb-3">
-              <img src="../img/antesedepois3.jpg" alt="New York" class="d-block" style="height:90vh; width: 100%;">
+              <img src="../imagens/antesedepois3.jpg" alt="New York" class="d-block" style="height:90vh; width: 100%;">
             </div>
           </div>
           
@@ -82,7 +82,7 @@
 <?php
 function listarVitrine(){
 	$conexao=	new mysqli("localhost", "root", "", "projeto");
-  $sql = "select * from produto";
+  $sql = "select * from produto group by nome";
 			
 	$resultado = mysqli_query($conexao, $sql); 
 	

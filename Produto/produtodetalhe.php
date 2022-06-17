@@ -47,7 +47,7 @@ function listar(){
 		$codigo = $_GET["codigo"];
 		$sql = "select * from produto where codigo=$codigo";	
 	} else {
-		$sql = "select * from produto order by nome";
+		$sql = "select * from produto";
 	}		
 	$resultado = mysqli_query($conexao, $sql);
 	while($reg = mysqli_fetch_array($resultado)){
@@ -78,7 +78,8 @@ function listar(){
           <div id=luzes-p class=accordion-collapse collapse aria-labelledby=luzes-1 data-bs-parent=#accordionFlushExample>
             <div class=accordion-body> 
                 <p class=produto-preco id=produto-preco>$precop</p>
-                <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>         
+                
             </div>
           </div>
         </div>
@@ -91,7 +92,8 @@ function listar(){
           <div id=luzes-m class=accordion-collapse collapse aria-labelledby=luzes-2 data-bs-parent=#accordionFlushExample>
             <div class=accordion-body>
                 <p class=produto-preco id=produto-preco>$precom</p>
-                <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>              
+               
             </div>
           </div>
         </div>
@@ -104,7 +106,7 @@ function listar(){
           <div id=luzes-g class=accordion-collapse collapse aria-labelledby=luzes-3 data-bs-parent=#accordionFlushExample>
             <div class=accordion-body>
                 <p class=produto-preco id=produto-preco>R$ $precog</p>
-                <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>               
             </div>
           </div>
         </div>
@@ -130,7 +132,8 @@ function listar(){
                 <div id=manicure-p class=accordion-collapse collapse aria-labelledby=manicure-1 data-bs-parent=#accordionFlushExample7>
                   <div class=accordion-body> 
                     <p class=produto-preco id=produto-preco>R$$precop</p>
-                      <input class=btn type=submit value=Adicionar ao carrinho onclick=botao()/>
+                    <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
+                      
                   </div>
                 </div>                    
             </div>              
