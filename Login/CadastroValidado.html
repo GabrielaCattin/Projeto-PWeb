@@ -27,8 +27,7 @@
     <nav class="flex-wrap navbar navbar-expand-sm navbar-dark">
       <div class="container-fluid">
       <div class="caixa d-flex justify-content-between align-items-center">
-        <a href="../Vitrine/vitrinepweb.html"><img class="mb-1 rounded-circle" src="../img/Amor de Mãe.png" /></a>
-                
+          <h1><img class="rounded-circle" src="../img/Amor de Mãe.png" /></h1>         
           <form class="pesquisa form-inline my-2 my-lg-0">
             <input
               class="form-control mr-sm-2"
