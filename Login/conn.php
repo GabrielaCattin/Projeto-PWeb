@@ -1,6 +1,6 @@
 <?php
 
-$conn=	new mysqli("localhost", "root", "", "pwn");
+$conn=	new mysqli("localhost", "root", "", "projeto");
 
 
 ?>

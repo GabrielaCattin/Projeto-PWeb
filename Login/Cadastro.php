@@ -110,7 +110,7 @@
       <div class="mb-3 col-md-4">
         <button type="button" class="btn btn-primary" onclick="botao1()">Cancelar</button>
         <button type="submit" id="enviar" name="Enviar" 
-        class="btn btn-primary">Enviar</button>
+        class="btn btn-primary" value="Enviar">Enviar</button>
       </div>
     </form>
 </body>
@@ -123,33 +123,33 @@
 <?php 
         
         if(isset($_POST["Enviar"])) {
-            $nome = $_POST['nome'];
-            $cpf = $_POST['cpf'];
-            $dtNascimento = $_POST['dtNascimento'];
-            $email = $_POST['email'];
-            $telefone = $_POST['telefone'];
-            $cep = $_POST['cep'];
-            $numero = $_POST['numero'];
-            $complemento = $_POST['complemento'];
-            $senha = $_POST['senha'];
-            $confirma = $_POST['confirme'];
+          $nome = $_POST['nome'];
+          $cpf = $_POST['cpf'];
+          $dtNascimento = $_POST['dtNascimento'];
+          $email = $_POST['email'];
+          $telefone = $_POST['telefone'];
+          $cep = $_POST['cep'];
+          $numero = $_POST['numero'];
+          $complemento = $_POST['complemento'];
+          $senha = $_POST['senha'];
+          $confirma = $_POST['confirme'];
 
-            if($senha == $confirma){
-                $senha = md5($senha);
-                $projeto = new mysqli("localhost", "root", "", "projeto");
-                $sql = "INSERT INTO usuario(codigo, nome, cpf, dtNascimento, email, telefone, cep, 
-                                            numero, complemento, senha, confirme) 
-                VALUES (DEFAULT, '$nome','$cpf','$dtNascimento',
-                '$email','$telefone','$cep','$numero','$complemento','$senha','$confirma');";
-                $err = mysqli_query( $projeto, $sql);
-                echo "<h4>Registro inserido com sucesso</h4>";
-                mysqli_close($projeto);
-            } else {
-                $_SESSION['error'] = "Senha incorreta";
-            }
-            include('CadastroValidado.html');
-            
-            
-        }
-      
+          if($senha == $confirma){
+              $senha = md5($senha);
+              $projeto = new mysqli("localhost", "root", "", "projeto");
+              $sql = "INSERT INTO usuario(codigo, nome, cpf, dtNascimento, email, telefone, cep, 
+                                          numero, complemento, senha, confirme) 
+              VALUES (DEFAULT, '$nome','$cpf','$dtNascimento',
+              '$email','$telefone','$cep','$numero','$complemento','$senha','$confirma');";
+              $err = mysqli_query( $projeto, $sql);
+              echo "<h4>Registro inserido com sucesso</h4>";
+              mysqli_close($projeto);
+          } else {
+              $_SESSION['error'] = "Senha incorreta";
+          }
+          include('CadastroValidado.html');
+          
+          
+      }
+    
     ?>
