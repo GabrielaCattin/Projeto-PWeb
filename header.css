@@ -19,7 +19,7 @@ main {
     border-bottom: 1px solid rgb(160, 158, 158);
 }
 
-a img{
+h1 img{
     width: 50px;   
 }
 
@@ -67,14 +67,10 @@ li{
     padding: 0;
 }
 
+<<<<<<< HEAD
+=======
 button.navbar-toggler {
     background-color: #d30c7b;   
-}
-
-.input-group-text{
-    border-color: #dbb4ad;
-    background-color: #dbb4ad;
-    color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -82,5 +78,6 @@ button.navbar-toggler {
         display: none !important;
     }
 }
- 
 
+
+>>>>>>> 761770d5f007a637774511641b778183ab3ae4a2

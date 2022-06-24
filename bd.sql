@@ -24,16 +24,22 @@ insert into produto values
 (DEFAULT, 'Pedicure', 'Pedicure', '', '', 50.00, '', '', 'Cutilagem, pintura e spa dos pés');
 
 
-
-drop table produto;
-
+    
 select * from produto;
 
-create table cesta (
+
+create table Usuario(
 codigo bigint primary key auto_increment,
-codigoProduto bigint,
-descricao varchar(100),
-valor numeric(18, 2),
-quantidade int(3),
-sessionId varchar(100)
+nome varchar(100),
+CPF int(11),
+dtNascimento date,
+email varchar(50),
+telefone varchar(100),
+cep int,
+numero int,
+complemento varchar(40),
+senha varchar(12),
+confirme varchar(12)
 );
+
+
