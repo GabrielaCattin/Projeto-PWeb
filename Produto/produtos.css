@@ -33,3 +33,8 @@ img.img-thumbnail {
     margin-top: 20px;
     font-weight: 700;
 }
+
+p.produto-preco {
+    color: #d30c7b!important;
+    font-weight: 700;
+}

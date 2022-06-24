@@ -48,108 +48,29 @@ function listar(){
 	while($reg = mysqli_fetch_array($resultado)){
 		$codigo = $reg["codigo"];
 		$nome = $reg["nome"];
-		$descricao = $reg["descricao"];
-    $tamanhop = $reg["tamanhop"];
-    $tamanhom = $reg["tamanhom"];
-    $tamanhog = $reg["tamanhog"];
-    $precop = $reg["precop"];
-    $precom = $reg["precom"];
-    $precog = $reg["precog"];
+		$descricao = $reg["descricao"];    
+    $preco = $reg["preco"];
+    
 
-    if(!empty($tamanhom)) {
-
-      if($codigo == 1 ) {
-        echo "
-        <h2 id=cabelo>Escolha o serviço de acordo com o tamanho do seu cabelo.</h2>
-        ";
-      }
-      echo "
+    echo "
       
-      <section class=separator id=$nome>
-      <h2 class=pt-3 pb-3>$nome</h2>
-      <img class=img-thumbnail src=../imagens/$codigo.jpg id=imgcompra />
-      <p class=produto-descricao>$descricao</p> 
-
-      <div class='shadow-lg accordion accordion-flush col-6 id=accordionFlushExample'>
-        <div class=accordion-item>
-          <h2 class=accordion-header id=$nome-$tamanhop>
-            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhop aria-expanded=false aria-controls=flush-$nome-$tamanhop>
-              $tamanhop
-            </button>
-          </h2>
-          <div id=flush-$nome-$tamanhop class=accordion-collapse collapse aria-labelledby=$nome-$tamanhop data-bs-parent=#accordionFlushExample>
-            <div class=accordion-body> 
-                <a class=produto-preco id=$nome-$precop>$precop</a>
-                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
-                
-            </div>
-          </div>
-        </div>
-
-        <div class=accordion-item>
-          <h2 class=accordion-header id=$nome-$tamanhom>
-            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhom aria-expanded=false aria-controls=#flush-$nome-$tamanhom>
-            $tamanhom
-            </button>
-          </h2>
-          <div id=flush-$nome-$tamanhom class=accordion-collapse collapse aria-labelledby=$nome-$tamanhom data-bs-parent=#accordionFlushExample>
-            <div class=accordion-body>
-                <p class=produto-preco id=produto-preco>$precom</p>
-                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
-               
-            </div>
-          </div>
-        </div>
-        <div class=accordion-item>
-          <h2 class=accordion-header id=$nome-$tamanhog>
-            <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhog aria-expanded=false aria-controls=#flush-$nome-$tamanhog>
-            $tamanhog
-            </button>
-          </h2>
-          <div id=flush-$nome-$tamanhog class=accordion-collapse collapse aria-labelledby=$nome-$tamanhog data-bs-parent=#accordionFlushExample>
-            <div class=accordion-body>
-                <p class=produto-preco id=produto-preco>R$ $precog</p>
-                <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
-                
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-    </section>
-      ";	
-    } else {
-      if($codigo == 7 ) {
-        echo "
-        <h2 id=mao-pe>Cuide de suas mãos e pés</h2>
-        ";
-      }
-      echo "
-      
-      <section class=separator id=$codigo>
-          <h2 class=pt-3 pb-3>$nome</h2>
-          <img class=img-thumbnail src=../imagens/$codigo.jpg id=imgcompra/>
-          <p class=produto-descricao id=produto-descricao>$descricao</p>
-          <div class='shadow-lg accordion accordion-flush col-6' id=accordionPanelsStayOpenExample7>             
-            <div class=accordion-item>
-                <h2 class=accordion-header id=$nome-$tamanhop>
-                  <button class=accordion-button collapsed type=button data-bs-toggle=collapse data-bs-target=#flush-$nome-$tamanhop aria-expanded=true aria-controls=flush-$nome-$tamanhop>
-                    $tamanhop
-                  </button>
-                </h2>
-                <div id=flush-$nome-$tamanhop class=accordion-collapse collapse aria-labelledby=$nome-$tamanhop data-bs-parent=#accordionFlushExample7>
-                  <div class=accordion-body> 
-                    <p class=produto-preco id=produto-preco>R$$precop</p>
-                    <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
-                      
-                  </div>
-                </div>                    
-            </div>              
-            
-        </section> 
-      ";
-    }
+    <section class=separator id=manicure>
+        <h2 class=pt-3 pb-3>$nome</h2>
+        <img class=img-thumbnail src=../imagens/$codigo.jpg id=imgcompra/>
+        <p class=produto-descricao id=produto-descricao>$descricao</p>
+        <div class='shadow-lg accordion accordion-flush col-6' id=accordionPanelsStayOpenExample7>             
+          <div class=accordion-item>              
+              <div id=manicure-p class=accordion-collapse collapse aria-labelledby=manicure-1 data-bs-parent=#accordionFlushExample7>
+                <div class=accordion-body> 
+                  <p class=produto-preco id=produto-preco>R$$preco</p>
+                  <a href='../Cesta/adicionar.php?codigo=$codigo' class='btn'>Adicionar</a>
+                    
+                </div>
+              </div>                    
+          </div>              
+          
+      </section> 
+    ";
 		
 	
 	}

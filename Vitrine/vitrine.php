@@ -92,7 +92,7 @@ function listarVitrine(){
 		$descricao	= $reg["descricao"];
 	
 		echo " 
-      <div class=col-xl-3 col-md-6 col-sm-12>
+      <div class='col-xl-3 col-md-6 col-sm-12'>
         <div class=card>        
           <img class=card-img-top src='../imagens/$codigo.jpg'/>
           <div class=card-body>
