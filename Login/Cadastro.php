@@ -110,7 +110,7 @@
       <div class="mb-3 col-md-4">
         <button type="button" class="btn btn-primary" onclick="botao1()">Cancelar</button>
         <button type="submit" id="enviar" name="Enviar" 
-        class="btn btn-primary" value="Enviar">Enviar</button>
+        class="btn btn-primary" value="Enviar" onclick="validar()">Enviar</button>
       </div>
     </form>
 </div>  
@@ -154,3 +154,67 @@
       }
     
     ?>
+    <script type="text/javascript">
+  function botao1() {
+    location.href = "../Vitrine/vitrinepweb.html";
+  }
+</script>
+<script type="text/javascript">
+  function botao2() {
+    location.href = "../Login/CadastroValidado.html";
+  }
+</script>
+
+<script lang="javascript">
+  function validar() {
+    if (txtName.value.length <= 3) {
+      alert("informe um nome valido");
+      return false;
+    }
+
+    if (txtEmail.value.length < 6 ||
+      txtEmail.value.indexOf("@") <= 0 ||
+      txtEmail.value.indexOf(".") <= 0) {
+      alert("informe um email valido");
+      return false;
+    }
+
+    if (txtTelefone.value.length < 10 | txtTelefone.value.length > 11) {
+
+      alert("Digite um número de telefone válido!");
+
+      txtTelefone.value = "";
+
+      txtTelefone.focus();
+
+      return false;
+
+    }
+
+    if (txtSenha.value.length <= 6 ||
+
+      !isNaN(txtSenha.value)) {
+
+      alert("Digite uma senha alfanumerica de 6 posições");
+
+      txtSenha.value = "";
+
+      txtSenha.focus();
+
+      return false;
+
+    }
+
+    if (txtSenha.value != txtSenhaConf.value) {
+
+      alert("Senha e confirmação são diferentes!");
+
+      txtSenhaConf.focus();
+
+      txtSenhaConf.value = "";
+
+      return false;
+
+    }
+  }
+</script>

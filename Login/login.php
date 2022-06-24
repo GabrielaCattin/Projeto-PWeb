@@ -99,7 +99,6 @@ mysqli_close($conexao);
               </div>
             </div>
       </form>
-      <?php if(isset($_POST["bt1"])) login(); ?>
     </div>
     <br> 
     <div class="col-12">
