@@ -19,7 +19,7 @@ main {
     border-bottom: 1px solid rgb(160, 158, 158);
 }
 
-h1 img{
+a img{
     width: 50px;   
 }
 
@@ -52,6 +52,13 @@ li{
     font-weight: 700 !important; 
 }
 
+
+element.style {
+}
+.navbar-dark .navbar-toggler {
+
+}
+
 .btn, #buscar {
     border-color: #dbb4ad;
     background-color: #dbb4ad;
@@ -67,10 +74,14 @@ li{
     padding: 0;
 }
 
-<<<<<<< HEAD
-=======
+.input-group-text{
+    border-color: #dbb4ad;
+    background-color: #dbb4ad;
+    color: #fff;
+}
+
 button.navbar-toggler {
-    background-color: #d30c7b;   
+    background-color: #d30c7b !important;   
 }
 
 @media (max-width: 768px) {
@@ -78,6 +89,3 @@ button.navbar-toggler {
         display: none !important;
     }
 }
-
-
->>>>>>> 761770d5f007a637774511641b778183ab3ae4a2

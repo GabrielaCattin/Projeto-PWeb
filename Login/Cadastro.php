@@ -113,6 +113,7 @@
         class="btn btn-primary" value="Enviar">Enviar</button>
       </div>
     </form>
+</div>  
 </body>
 
 <?php

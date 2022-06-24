@@ -28,7 +28,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
-          <h2><span>Carrinho</span></h2>
+          <h2>Carrinho</h2>
         </div>
       </div>
       <div class="item"> 
@@ -36,8 +36,8 @@
       </div>
       
      <form class="botao" method="post" action="">
-      <a class="btn" id="btn2" href="../Vitrine/vitrine.php">Finalizar compra</a>
-      <a class="btn" id="btn2" href="../Vitrine/vitrine.php">Continuar comprando</a>       
+      <a class="btn" href="../Vitrine/vitrine.php">Finalizar compra</a>
+      <a class="btn" href="../Vitrine/vitrine.php">Continuar comprando</a>                
       <button class="btn" name="limpar">Limpar carrinho</button>
     </form>
     <?php if(isset($_POST["limpar"])) limpar(); ?>
@@ -71,31 +71,27 @@ function listarcesta(){
         $total	=	$reg["total"];
         echo "
        
-        <div class=container mt-3>
+        <div class=mt-3>
           <div class='card'>        
             <img class=card-img-top src='../imagens/$codigo.jpg'/>
             <div class=card-body>
-            <div class=card-header><B>$nome</B></div>
-              
-            <div class=card-footer><B>$preco</B></div>
-            
-            
-            <div class=card-footer><B>Quantidade: $quantidade</B></div>
-            
-            
+            <div class=card-header><B>$nome</B></div>              
+            <div class=card-footer><B>$preco</B></div>            
+            <div class=card-footer><B>Quantidade: $quantidade</B></div>            
           </div>   
         </div>
       </div>          
     ";
    
     $totalPedido = $totalPedido + $total;
- 
+   
     
-      }      
+      }  
+     
     }  
-    
+    echo "<div class='container total'><b>Total: R$ $totalPedido,00</b></div>";
     mysqli_close($conexao);
-    echo "<div class=total><b>Total: R$ $totalPedido</b></div>";
+    
 }
 function limpar(){
   $sessionId = session_id();  

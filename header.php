@@ -17,7 +17,7 @@
               </button>
             </form>
             <div class="cadastro">
-              <a id="cadastro" href="../Login/Cadastro.html">
+              <a id="cadastro" href="../Login/Cadastro.php">
                 <img src="../imagens/avatar.png" alt="Cadastro" />
                 Cadastro
               </a>
@@ -41,13 +41,13 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Contato/contato.html">Contato</a>
+              <a class="nav-link" href="../Contato/contato.php">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../Cesta/cesta.html">Cesta</a>
+              <a class="nav-link" href="../Cesta/cesta.php">Cesta</a>
             </li> 
             <li class="nav-item">
-              <a class="nav-link" href="../Login/login.html">Login</a>
+              <a class="nav-link" href="../Login/login.php">Login</a>
             </li> 
           </ul>
         </div>
