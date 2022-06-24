@@ -1,22 +1,29 @@
 <?php
-function login(){
   session_start();
+if(isset($_POST["ACAO"]) && $_POST["ACAO"] == 1){
 $usuario = $_POST['email'];
 $senha = md5($_POST['senha']);
 $conexao = new mysqli("localhost", "root", "", "projeto");
-$retorno_usuario = "SELECT * FROM usuario WHERE email = '$usuario' && senha = md5('$senha') LIMIT 1";
+$retorno_usuario = "SELECT * FROM usuario WHERE email = '$usuario' and senha = '$senha' LIMIT 1";
 $resultado_usuario = mysqli_query($conexao, $retorno_usuario);
-$resultado = mysqli_fetch_assoc($resultado_usuario);
+$rowcount=mysqli_num_rows($resultado_usuario);
+$resultado = mysqli_fetch_array($resultado_usuario);
+if($rowcount > 0){
+  if (isset($resultado_usuario)) {
+      
+      $_SESSION['email'] = $resultado['email'];
+      $_SESSION['senha'] = $resultado['senha'];
+      print_r($_SESSION);
+      header("location: ../Vitrine/vitrine.php");
+  } else {
+     echo " <h4>E-mail e/ou senha inválido(s)!</h4>";
+  } 
 
-if (isset($resultado_usuario)) {
-    $_SESSION['codigo'] = $resultado['codigo'];
-    $_SESSION['nome'] = $resultado['nome'];
-    $_SESSION['email'] = $resultado['email'];
-    echo "<h4>conexao ok teste teste teste</H4>";
-    header("location: ../Vitrine.php");
 } else {
-   echo " <h4>E-mail e/ou senha inválido(s)!</h4>";
+  echo "<h4>Usuario não encontrado</h4>";
 }
+
+
 mysqli_close($conexao);
 }
 ?>
@@ -45,14 +52,15 @@ mysqli_close($conexao);
 </head>
 
 <body>
-<?php include("../header.php") ?>
-
-  <div class="container d-flex">
+<?php include("../header.php"); ?>
+ <div class="container d-flex">
     <div class="col-12">
       <h2 class="text-center">Por gentileza, identifique-se</h2>
       <br>
       <form action="login.php" method="POST">
         <center>
+        <input  type="hidden"  id="ACAO" value="1"
+            name="ACAO">
         <div class="mb-3 mt-3">
           <label for="email" class="form-label">Email:</label>
           <input  type="email"  id="email" placeholder="Entre com seu email"
@@ -71,7 +79,7 @@ mysqli_close($conexao);
 
         <div> 
           <div>
-          <button name="bt1">Entrar</button>
+          <input type="submit" value="Entrar">
           </div>
 
           <div class="mt-3">
@@ -118,7 +126,4 @@ mysqli_close($conexao);
   }
 </script>
 
-
 </html>
-<?php
-
